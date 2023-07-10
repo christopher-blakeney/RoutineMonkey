@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}" />
+    <meta charset="UTF-8">
+    <title>File Upload</title>
+    <script>
+    </script>
+  </head>
+  <body>
+    <form class="form" method="POST" action="/output" enctype="multipart/form-data">
+      <div class="title">&#128075; Welcome!</div>
+      <div class="subtitle">To get started,
+      <a href="{{ url_for('download_file', filename='files/template.xlsx') }}">download the template,</a>
+      fill it with your favourite exercises and upload it below.</div>
+      <p id="feedback"></p>
+      <div class="input-container ic1">
+	<div class="file-input">
+             <input id="file" name="file" class="file" type="file" placeholder=" " accept=".xlsx" required/>
+	     <label for="file">select file</label>
+	</div>
+      </div>
+      <div class="input-container ic2">
+        <input id="split" name="split" class="input" type="text" placeholder=" " required/>
+        <div class="cut cut-short"></div>
+        <label for="split" class="placeholder">Split</label>
+      </div>
+      <div class="input-container ic2">
+        <input id="imp" name="imp" class="input" type="text" placeholder=" " required/>
+        <div class="cut"></div>
+        <label for="implement" class="placeholder">Implement</>
+      </div>
+<button type="text" class="submit">generate routine</button>
+</form>
+<div style="color:#fd1d1d;" class="links">
+  <a href="{{ url_for('index') }}">Home</a>
+  / <a href="{{ url_for('help') }}">Help</a>
+  / <a href="https://github.com/christopher-blakeney" target="_blank">Developer</a>
+</div>
+</body>
+</html>

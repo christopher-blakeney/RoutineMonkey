@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}" />
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <script>
+    </script>
+  </head>
+  <body>
+    <div style="background:white;"class="form">
+      <div style="color:white;height:150px;margin-bottom:30px;font-family:monospace;padding:10px;border-radius:10px;background:black;text-align:left;" class="subtitle">ERROR: {{ e }}<div style="font-size:30px;" class="blink_me">&#9646;</div></div>
+      <!--<div style="text-align:center;font-size:30px;"><a href="{{ url_for('index') }}">Go Back &#8617;</a></div>-->
+      <div class="butcontainer">
+	<button style="width:100%; background: hsl(340deg 100% 32%);" class="pushable" onclick="window.location.href='{{ url_for('index') }}';" type="button">
+	  <span style="background: hsl(345deg 100% 47%);color:white;" class="front">
+	    ⬅  Go back 
+	  </span>
+	</button>
+	<br>
+	<button style="width:33%;"class="pushable" onclick="{{ url_for('index') }}" type="button">
+	  <span class="front">
+	  &nbsp+&nbsp
+	  </span>
+	</button>
+	<button style="width:31%;" class="pushable" onclick="{{ url_for('index') }}" type="button">
+	  <span class="front">
+	   &nbsp-&nbsp
+	  </span>
+	</button>
+	<button style="width:33%;" class="pushable" onclick="{{ url_for('index') }}" type="button">
+	  <span class="front">
+	   &nbsp=&nbsp
+	  </span>
+	</button>
+	<button style="width:100%;" class="pushable" onclick="{{ url_for('index') }}" type="button">
+	  <span class="front">
+	    ⎵
+	  </span>
+	</button>
+      </div>
+    </div>
+    <div style="color:#fd1d1d;" class="links">
+      <a href="{{ url_for('index') }}">Home</a>
+      / <a href="{{ url_for('help') }}">Help</a>
+      / <a href="https://github.com/christopher-blakeney" target="_blank">Developer</a>
+    </div>
+</body>
+</html>

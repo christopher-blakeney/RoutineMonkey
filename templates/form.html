@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>FORM</title>
+</head>
+ 
+<body>
+  <script>
+    function toggle_display(){
+	el = document.querySelector('.content_section');
+  
+	if(el.style.visibility == 'hidden'){
+	    el.style.visibility = 'visible'
+	}else{
+	    el.style.visibility = 'hidden'
+	}
+    }
+  </script>
+    
+    <form action="" method="GET">
+    <p>Routine name: <input type="text" placeholder="Tim's Cool Workout" name="routine_title"></p>
+    <p>Split: <select name="split_choice" class="Input">
+      {% for o in data1 %}
+      <option value="{{ o.split }}">{{ o.split }}</option>
+      {% endfor %}
+    </select>
+    </p>
+    <p>Choice of implement: <select name="implement_choice" class="Input"></p>
+      {% for o in data %}
+      <option value="{{ o.implement }}">{{ o.implement }}</option>
+      {% endfor %}
+    </select>
+    <p><input type="submit" value="Generate Routine" onclick="toggle_display()"/></p>
+    </form>
+  </div>
+  <div class="content_section" style="visibility:hidden;">
+    {% for table in tables %}
+    {{titles[loop.index]}}
+    {{ table|safe }}
+    {% endfor %}
+  </div>
+</body>
+ 
+</html>

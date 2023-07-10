@@ -1,0 +1,328 @@
+html {
+    /*background-image: linear-gradient(to bottom right, #fffef0, #B2EBF2);*/
+    background: radial-gradient(#e3e6e8, #ffffff);
+    height: 150%;
+    margin: 0; height: 100%; overflow: hidden
+}
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    margin: -40px;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    flex-direction: column
+}
+a {
+    color: #fd1d1d;
+}
+a:hover {
+    color: #fcb045;
+}
+
+.form {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 550px;
+    padding: 40px;
+    width: 450px;
+    margin-top: 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.form2 {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 640px;
+    padding: 40px;
+    width: 640px;
+    margin-top: 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    color: #121212;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.subtitle {
+    color: #121212;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    margin-top: 10px;
+}
+
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.ic1 {
+    margin-top: 40px;
+}
+
+.ic2 {
+    margin-top: 30px;
+}
+
+.input {
+    background-color: #edf0f5;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 20px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+
+.cut {
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 89px;
+}
+
+.cut-short {
+    width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+}
+
+.placeholder {
+    color: lightgrey;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    font-size: 20px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+    color: #808097;
+}
+
+.input:focus ~ .placeholder {
+    color:  #fd1d1d;
+}
+.submit {
+    box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+    background-image: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    background-size: 130% 130%;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    height: 50px;
+    margin-top: 10px;
+    // outline: 0;
+    text-align: center;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+.submit:hover {
+    -webkit-animation: gradient 3s ease infinite;
+    -moz-animation: gradient 3s ease infinite;
+    animation: gradient 3s ease infinite;
+}
+.submit:active {
+    background-color: #06b;
+}
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: relative;
+}
+.file-input label {
+    margin: 0 0 300px 0;
+    background: #fd1d1d;
+    font-family: sans-serif;
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 35px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.file-input label:hover {
+    color: white;
+}
+/*
+table {
+    width: 100%;
+    height: 50%;
+    border-collapse: collapse;
+    margin: 13px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+    background-color: #fcb045;
+    color: black;
+    text-align: center;
+}
+table th, table td {
+    padding: 5px 5px;
+}
+*/
+@-moz-keyframes gradient {
+    0% {
+	background-position: 0% 50%;
+    }
+    50% {
+	background-position: 100% 50%;
+    }
+    100% {
+	background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+	background-position: 0% 50%;
+    }
+    50% {
+	background-position: 100% 50%;
+    }
+    100% {
+	background-position: 0% 50%;
+    }
+}
+
+table {
+    background-color: #e6edf2;
+    border-collapse: collapse;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: black;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /*max-width: 100%;*/
+}
+thead {
+    background-image: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+}
+th {
+    letter-spacing: 0.3px;
+    text-align: left;
+}
+td {
+    background-color: white;
+    color: black;
+}
+td strong {
+    color: black;
+}
+td, th {
+    border: 0px solid rgba(0, 0, 0, 0.1);
+    padding: 13px;
+}
+tbody tr:hover td, tbody tr:hover td a {
+    background-color: white;
+    color: black;
+}
+.links {
+    color: black;
+    overflow: hidden;
+    font-family: sans-serif;
+    margin-top: 30px;
+}
+.buttons {
+    background-color: #ffffff;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 17px 0 0 0;
+    width: 350px;
+    color: black;
+    font-family: sans-serif;
+    font-size: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  100% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 100;
+  }
+}
+/*BUTTON ON ERROR PAGE*/
+.butcontainer {
+    margin-top: 45px;
+    width: 100%;
+    text-align: center;
+}
+.pushable {
+    display: inline-block;
+    background: #808080;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    margin: 5px 0 15px 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    text-align: center;
+  }
+.front {
+    display: block;
+    padding: 8px 42px;
+    border-radius: 12px;
+    font-size: 32px;
+    background: #e8e8e8;
+    color: #808080;
+    transform: translateY(-7px);
+  }
+
+.pushable:active .front {
+    transform: translateY(-2px);
+  }

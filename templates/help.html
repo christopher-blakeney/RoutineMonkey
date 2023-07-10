@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}" />
+    <title>Output</title>
+  </head>
+  <body>
+    <div class="form2">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/xyC7tWQdzRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <h2>How to use:</h2>
+      <p>Download the spreadsheet template and fill it in with your favourite exercises. Upload it and input your desired implement / split, then click generate. You can then shuffle and download your new exercise routine.</p>
+      <h2>Spreadsheet formatting:</h2>
+      <p>Your spreadsheet's column names should not be changed from how they exist in the template. Please ensure all columns are filled out for each exercise you enter.</p>
+    </div>
+    <div style="color:#fd1d1d;" class="links">
+      <a href="{{ url_for('index') }}">Home</a>
+      / <a href="{{ url_for('help') }}">Help</a>
+      / <a href="https://github.com/christopher-blakeney" target="_blank">Developer</a>
+    </div>
+  </body>
+</html>
